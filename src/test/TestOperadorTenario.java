@@ -15,5 +15,10 @@ public class TestOperadorTenario {
             numeroMayor = j;
         }*/
 
+        int f = 1;
+        int r = 2;
+        int numeroMayor2 = 0;
+        numeroMayor = r > f ? r : f;
+        System.out.println("numeroMayor: " + numeroMayor);
     }
 }
