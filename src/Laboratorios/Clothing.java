@@ -1,6 +1,6 @@
 package Laboratorios;
 
-public class Clothing {
+public class Clothing implements Comparable<Clothing> {
 
     private String description;
     private double price;
@@ -41,5 +41,17 @@ public class Clothing {
         this.size = size;
     }
 
+    @Override
+    public String toString() {
+        return "Clothing{" +
+                "description='" + description + '\'' +
+                ", price=" + price +
+                ", size='" + size + '\'' +
+                '}';
+    }
 
+    @Override
+    public int compareTo(Clothing o) {
+        return this.description.compareTo(o.description);
+    }
 }

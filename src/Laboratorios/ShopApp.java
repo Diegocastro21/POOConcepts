@@ -1,6 +1,6 @@
 package Laboratorios;
 
-import jdk.swing.interop.SwingInterOpUtils;
+import java.util.Arrays;
 
 public class ShopApp {
     public static void main(String[] args) {
@@ -27,16 +27,40 @@ public class ShopApp {
 
         c1.addItems(items);
 
-        c1.setSize(measurement);
-
-
+//        c1.setSize(measurement);
+        System.out.println("Customer is: "+c1.getName() + ","+c1.getName()+","+c1.getSize()+","+ c1.getTotalClothingCost());
         for (Clothing item : c1.getItems()) {
-            System.out.println("Items : "+ item.getDescription());
+//            System.out.println("Items : "+ item.getDescription());
+            System.out.println("Item output: "+item);
+        }
+
+        int average = 0;
+        int count = 0;
+
+
+        for (Clothing item : c1.getItems()){
+            if(item.getSize().equals("L")){
+                count++;
+                average += item.getPrice();
+            }
+        }
+
+        try{
+            average = (count == 0) ? 0 : average/count;
+            average = average / count;
+            System.out.println("Average price: "+average+ ", Cont: "+count);
+        }catch (ArithmeticException e){
+            System.out.println("Dont divide by zero");
         }
 
 
+        Arrays.sort(c1.getItems());
+        System.out.println("________________    Ordenado    __________________");
 
+        for (Clothing item : c1.getItems()) {
 
+            System.out.println("Item output: "+item);
+        }
 
     }
 }
