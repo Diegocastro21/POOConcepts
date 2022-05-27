@@ -1,0 +1,4 @@
+1   Aprendiendo a manejar archivos
+2   En esta linea se prueba el ciclo while
+3   tercera linea para la iteracioin del ciclo
+4   ultima linea y con esta para la iteracion
